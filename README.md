@@ -165,6 +165,7 @@ It also never runs install scripts. Build behavior is reported only where a lock
 - [Ecosystem evidence and limitations](docs/ecosystem-evidence.md)
 - [Policy reference and rollout](docs/policy.md)
 - [CLI and machine-readable output](docs/output.md)
+- [Practical integration recipes](docs/recipes.md)
 - [Architecture and normalized graph](docs/architecture.md)
 - [Threat model and trust boundaries](docs/security-model.md)
 
