@@ -29,8 +29,13 @@ for release_target in linux/amd64 linux/arm64 darwin/amd64 darwin/arm64 windows/
       -trimpath -buildvcs=false -ldflags="-s -w -X main.version=$release_version" \
       -o "$release_stage/$release_archive/$release_executable" ./cmd/depprism
   )
-  cp "$release_root/LICENSE" "$release_root/README.md" "$release_stage/$release_archive/"
-  touch -d "@$release_epoch" "$release_stage/$release_archive" "$release_stage/$release_archive"/*
+  cp "$release_root/LICENSE" "$release_root/README.md" "$release_root/CHANGELOG.md" \
+    "$release_root/CONTRIBUTING.md" "$release_root/CODE_OF_CONDUCT.md" \
+    "$release_root/SECURITY.md" "$release_stage/$release_archive/"
+  cp -R "$release_root/docs" "$release_stage/$release_archive/docs"
+  mkdir -p "$release_stage/$release_archive/.github"
+  cp -R "$release_root/.github/assets" "$release_stage/$release_archive/.github/assets"
+  find "$release_stage/$release_archive" -exec touch -d "@$release_epoch" {} +
 
   rm -f "$release_output/$release_archive.$release_extension"
   if [[ "$release_extension" == zip ]]; then
