@@ -1,0 +1,9 @@
+/brandkit/
+/coverage.out
+/depprism
+/dist/
+/.idea/
+/.vscode/
+*.prof
+*.test
+

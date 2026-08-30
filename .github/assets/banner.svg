@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="DepPrism — turn lockfile noise into dependency evidence, by Nintech">
+  <title>DepPrism — turn lockfile noise into dependency evidence</title>
+  <defs>
+    <linearGradient id="brand" x1="82" y1="210" x2="600" y2="135" gradientUnits="userSpaceOnUse"><stop stop-color="#60a5fa"/><stop offset="0.5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#f97316"/></linearGradient>
+    <linearGradient id="markGrad" x1="15" y1="50" x2="49" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#60a5fa"/><stop offset="0.45" stop-color="#8b5cf6"/><stop offset="1" stop-color="#f97316"/></linearGradient>
+    <linearGradient id="hairline" x1="0" y1="0" x2="1280" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#60a5fa" stop-opacity="0"/><stop offset="0.3" stop-color="#60a5fa" stop-opacity="0.7"/><stop offset="0.6" stop-color="#8b5cf6" stop-opacity="0.7"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></linearGradient>
+    <radialGradient id="glowViolet"><stop stop-color="#8b5cf6" stop-opacity="0.34"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowBlue"><stop stop-color="#60a5fa" stop-opacity="0.25"/><stop offset="1" stop-color="#60a5fa" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowOrange"><stop stop-color="#f97316" stop-opacity="0.2"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.5" fill="#94a3b8" fill-opacity="0.07"/></pattern>
+    <clipPath id="card"><rect width="1280" height="400" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="1280" height="400" fill="#060509"/><rect width="1280" height="400" fill="url(#dots)"/>
+    <ellipse cx="1030" cy="135" rx="430" ry="310" fill="url(#glowViolet)"/><ellipse cx="160" cy="340" rx="390" ry="260" fill="url(#glowBlue)"/><ellipse cx="1190" cy="350" rx="270" ry="210" fill="url(#glowOrange)"/>
+    <g transform="translate(88,56) scale(0.5)"><path d="M15 50 L15 27 C15 20.2 17.4 19.11 22.5 23.6 L41.5 40.4 C46.6 44.89 49 43.8 49 37 L49 14" fill="none" stroke="url(#markGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="128" y="86" font-family="'Plus Jakarta Sans',ui-sans-serif,system-ui,sans-serif" font-size="17" font-weight="700" letter-spacing="4.5" fill="#f8fafc">NINTECH</text>
+    <text x="288" y="86" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="12.5" letter-spacing="1.6" fill="#64748b">· OPEN SOURCE</text>
+    <text x="86" y="210" font-family="'Plus Jakarta Sans',ui-sans-serif,system-ui,sans-serif" font-size="79" font-weight="800" letter-spacing="-2" fill="url(#brand)">depprism</text>
+    <text x="90" y="260" font-family="'Plus Jakarta Sans',ui-sans-serif,system-ui,sans-serif" font-size="25" font-weight="500" fill="#e2e8f0">Turn lockfile noise into dependency evidence</text>
+    <text x="90" y="295" font-family="'Plus Jakarta Sans',ui-sans-serif,system-ui,sans-serif" font-size="18" fill="#8b93a7">See what moved. Know why it matters.</text>
+    <g font-family="'JetBrains Mono',ui-monospace,monospace" font-size="12.5" letter-spacing="1">
+      <g><rect x="88" y="326" width="104" height="32" rx="16" fill="#fff" fill-opacity="0.04" stroke="#60a5fa" stroke-opacity="0.35"/><text x="140" y="347" fill="#7cb8ff" text-anchor="middle">OFFLINE</text></g>
+      <g><rect x="202" y="326" width="148" height="32" rx="16" fill="#fff" fill-opacity="0.04" stroke="#8b5cf6" stroke-opacity="0.35"/><text x="276" y="347" fill="#c4b5fd" text-anchor="middle">7 ECOSYSTEMS</text></g>
+      <g><rect x="360" y="326" width="140" height="32" rx="16" fill="#fff" fill-opacity="0.04" stroke="#f97316" stroke-opacity="0.38"/><text x="430" y="347" fill="#fdba74" text-anchor="middle">BASE-TRUSTED</text></g>
+    </g>
+    <g font-family="'JetBrains Mono',ui-monospace,monospace">
+      <text x="706" y="82" font-size="11" letter-spacing="1.4" fill="#64748b">COMMITTED DEPENDENCIES</text>
+      <g font-size="12.5"><rect x="704" y="101" width="192" height="34" rx="8" fill="#fff" fill-opacity="0.04" stroke="#60a5fa" stroke-opacity="0.35"/><text x="720" y="123" fill="#cbd5e1">alpha@1.0.0</text><rect x="704" y="147" width="192" height="34" rx="8" fill="#fff" fill-opacity="0.04" stroke="#8b5cf6" stroke-opacity="0.35"/><text x="720" y="169" fill="#cbd5e1">child@3.0.0</text><rect x="704" y="193" width="192" height="34" rx="8" fill="#fff" fill-opacity="0.04" stroke="#f97316" stroke-opacity="0.4"/><text x="720" y="215" fill="#cbd5e1">sha512:after</text></g>
+      <path d="M916 111 L1006 197 L916 283 Z" fill="#8b5cf6" fill-opacity="0.08" stroke="#c4b5fd" stroke-opacity="0.65" stroke-width="2"/>
+      <path d="M896 118 L964 184" stroke="#94a3b8" stroke-width="2"/><path d="M896 164 L964 191" stroke="#94a3b8" stroke-width="2"/><path d="M896 210 L964 201" stroke="#94a3b8" stroke-width="2"/>
+      <text x="954" y="316" font-size="11" letter-spacing="1.3" fill="#a78bfa" text-anchor="middle">NORMALIZE · COMPARE</text>
+      <g fill="none" stroke-width="3" stroke-linecap="round"><path d="M974 188 C1042 133 1080 107 1188 102" stroke="#60a5fa"/><path d="M981 194 C1054 174 1095 163 1200 164" stroke="#8b5cf6"/><path d="M981 201 C1054 219 1095 228 1200 226" stroke="#f97316"/><path d="M974 207 C1042 262 1080 286 1188 290" stroke="#34d399"/></g>
+      <g font-size="11.5" letter-spacing="1"><text x="1084" y="91" fill="#7cb8ff">IDENTITY</text><text x="1101" y="153" fill="#c4b5fd">PATH</text><text x="1096" y="255" fill="#fdba74">INTEGRITY</text><text x="1085" y="317" fill="#6ee7b7">BEHAVIOR</text></g>
+    </g>
+    <rect x="0" y="396" width="1280" height="4" fill="url(#hairline)"/>
+  </g>
+</svg>

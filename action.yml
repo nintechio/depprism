@@ -1,0 +1,37 @@
+name: DepPrism
+description: Turn lockfile noise into offline, semantic dependency evidence for pull requests.
+author: Nintech
+branding:
+  icon: aperture
+  color: purple
+inputs:
+  base:
+    description: Trusted base commit. Pull requests infer this from GitHub's event payload.
+    required: false
+    default: ""
+  policy:
+    description: Repository-relative policy path. The file is always read from the base commit.
+    required: false
+    default: .depprism.json
+outputs:
+  passed:
+    description: Whether dependency policy passed.
+  added:
+    description: Number of normalized package records added.
+  removed:
+    description: Number of normalized package records removed.
+  updated:
+    description: Number of normalized package records updated.
+  high-risk:
+    description: Number of changes with high-risk evidence.
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - git
+    - --base
+    - ${{ inputs.base }}
+    - --policy
+    - ${{ inputs.policy }}
+    - --format
+    - github

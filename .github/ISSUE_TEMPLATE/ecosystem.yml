@@ -1,0 +1,32 @@
+name: Ecosystem or format proposal
+description: Propose support for a dependency format with verifiable committed evidence.
+title: "ecosystem: "
+labels: [enhancement]
+body:
+  - type: input
+    id: format
+    attributes:
+      label: Format and current version
+    validations:
+      required: true
+  - type: textarea
+    id: usecase
+    attributes:
+      label: Real review use case
+      description: What lockfile noise or unsafe transition is difficult to review today?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Committed evidence
+      description: Which fields prove identity, source, integrity, directness, graph edges, or build behavior?
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Ambiguities and limits
+      description: What must DepPrism explicitly avoid inferring?
+    validations:
+      required: true

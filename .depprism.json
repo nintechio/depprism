@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nintechio/depprism/main/policy.schema.json",
+  "fail_on": [
+    "integrity-drift",
+    "source-drift"
+  ],
+  "max_added": 10,
+  "deny_new_git_sources": true,
+  "deny_new_build_behavior": false,
+  "allowed_source_prefixes": [],
+  "allowed_packages": []
+}

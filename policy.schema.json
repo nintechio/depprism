@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/nintechio/depprism/main/policy.schema.json",
+  "title": "DepPrism policy",
+  "description": "Trusted policy for deterministic dependency-change evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "fail_on": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "build-enabled",
+          "integrity-drift",
+          "new-build-package",
+          "new-git-source",
+          "source-drift"
+        ]
+      },
+      "default": ["integrity-drift", "source-drift"]
+    },
+    "max_added": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Maximum added normalized package records. Zero disables the limit."
+    },
+    "deny_new_git_sources": {
+      "type": "boolean",
+      "default": false
+    },
+    "deny_new_build_behavior": {
+      "type": "boolean",
+      "default": false
+    },
+    "allowed_source_prefixes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1},
+      "default": []
+    },
+    "allowed_packages": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1},
+      "default": []
+    }
+  }
+}

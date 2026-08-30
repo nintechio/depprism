@@ -1,0 +1,9 @@
+# Default ownership and trust-critical release surfaces.
+* @nintechio
+/.github/workflows/ @nintechio
+/action.yml @nintechio
+/Dockerfile @nintechio
+/scripts/build-release.sh @nintechio
+/.changefence.json @nintechio
+/.depprism.json @nintechio
+/policy.schema.json @nintechio

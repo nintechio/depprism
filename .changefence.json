@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nintechio/changefence/main/policy.schema.json",
+  "max_files": 30,
+  "max_additions": 2500,
+  "max_deletions": 1800,
+  "max_lines_per_file": 800,
+  "forbidden": [
+    "dist/**",
+    "*.pem",
+    "*.key",
+    ".env"
+  ],
+  "protected": [
+    ".changefence.json",
+    ".depprism.json",
+    "policy.schema.json",
+    ".github/workflows/**",
+    ".github/dependabot.yml",
+    "action.yml",
+    "Dockerfile",
+    "scripts/build-release.sh",
+    "CODEOWNERS",
+    "SECURITY.md"
+  ],
+  "source_patterns": [
+    "*.go",
+    "cmd/**/*.go"
+  ],
+  "test_patterns": [
+    "*_test.go",
+    "cmd/**/*_test.go"
+  ],
+  "require_tests_for_source": true,
+  "allow_dependency_changes": false,
+  "allow_binary_changes": false,
+  "zones": [
+    {
+      "name": "release-surface",
+      "patterns": [
+        "action.yml",
+        "Dockerfile",
+        "scripts/build-release.sh",
+        ".github/workflows/**"
+      ],
+      "max_files": 4,
+      "max_additions": 500,
+      "max_deletions": 300,
+      "max_lines_per_file": 300
+    }
+  ]
+}

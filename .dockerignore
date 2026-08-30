@@ -1,0 +1,9 @@
+.git
+.github
+brandkit
+dist
+docs
+testdata
+*.md
+coverage.out
+depprism

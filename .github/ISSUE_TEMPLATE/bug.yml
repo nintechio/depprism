@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible incorrect result or operational failure.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Remove secrets and private repository content. Report trust-boundary bypasses through a private Security Advisory.
+  - type: input
+    id: version
+    attributes:
+      label: DepPrism version
+      placeholder: v1.0.0 or commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: ecosystem
+    attributes:
+      label: Ecosystem
+      options:
+        - npm
+        - pnpm
+        - Yarn Classic
+        - Yarn Berry
+        - uv
+        - Poetry
+        - Cargo
+        - Go modules
+        - Git or output layer
+    validations:
+      required: true
+  - type: textarea
+    id: fixture
+    attributes:
+      label: Minimal sanitized fixture
+      description: Include only the records needed to reproduce the behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Actual and expected result
+      description: Include complete output and exit code.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I removed secrets, tokens, private sources, and proprietary repository data.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true

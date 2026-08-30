@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" width="1100" height="620" role="img" aria-label="DepPrism terminal demo showing semantic dependency evidence">
+  <title>DepPrism in action</title>
+  <defs><linearGradient id="titlebar" x1="0" x2="1100"><stop stop-color="#141320"/><stop offset="1" stop-color="#0d0c14"/></linearGradient><linearGradient id="edge" x1="0" x2="1100"><stop stop-color="#60a5fa" stop-opacity="0.55"/><stop offset="0.5" stop-color="#8b5cf6" stop-opacity="0.55"/><stop offset="1" stop-color="#f97316" stop-opacity="0.55"/></linearGradient></defs>
+  <rect x="0.5" y="0.5" width="1099" height="619" rx="14" fill="#08070d" stroke="url(#edge)"/><path d="M0 14.5A14 14 0 0 1 14.5.5h1071a14 14 0 0 1 14 14V52H.5Z" fill="url(#titlebar)"/><line x1="0" y1="52" x2="1100" y2="52" stroke="#fff" stroke-opacity="0.07"/>
+  <circle cx="28" cy="26" r="6" fill="#f87171"/><circle cx="50" cy="26" r="6" fill="#fbbf24"/><circle cx="72" cy="26" r="6" fill="#34d399"/><text x="550" y="31" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="13" fill="#8b93a7">depprism — ~/projects/api</text>
+  <g xml:space="preserve" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="15">
+    <text x="32" y="96"><tspan fill="#8b5cf6">$ </tspan><tspan fill="#f8fafc">depprism diff before/package-lock.json after/package-lock.json</tspan></text>
+    <text x="32" y="136"><tspan fill="#f87171">DepPrism FAIL</tspan><tspan fill="#8b93a7"> — </tspan><tspan fill="#34d399">2 added</tspan><tspan fill="#8b93a7">, 0 removed, 0 updated, 1 metadata</tspan></text>
+    <text x="32" y="181"><tspan fill="#f8fafc">package-lock.json</tspan><tspan fill="#64748b"> (npm)</tspan></text>
+    <text x="32" y="219"><tspan fill="#fbbf24">! alpha 1.0.0</tspan><tspan fill="#7cb8ff"> [direct]</tspan></text>
+    <text x="58" y="248"><tspan fill="#f87171">HIGH </tspan><tspan fill="#fdba74">integrity-drift</tspan><tspan fill="#cbd5e1">  integrity evidence changed without a version change</tspan></text>
+    <text x="32" y="294"><tspan fill="#34d399">+ beta </tspan><tspan fill="#64748b">∅ → </tspan><tspan fill="#f8fafc">2.0.0</tspan><tspan fill="#7cb8ff"> [direct]</tspan></text>
+    <text x="58" y="323"><tspan fill="#fbbf24">MEDIUM </tspan><tspan fill="#fdba74">new-build-package</tspan><tspan fill="#cbd5e1">  new dependency declares install-time or build behavior</tspan></text>
+    <text x="32" y="369"><tspan fill="#34d399">+ child </tspan><tspan fill="#64748b">∅ → </tspan><tspan fill="#f8fafc">3.0.0</tspan></text>
+    <text x="58" y="398"><tspan fill="#64748b">via </tspan><tspan fill="#c4b5fd">alpha</tspan><tspan fill="#64748b"> → </tspan><tspan fill="#c4b5fd">child</tspan></text>
+    <line x1="32" y1="438" x2="1068" y2="438" stroke="#fff" stroke-opacity="0.07"/>
+    <text x="32" y="482" fill="#475569"># inspect the complete stable schema without registry or package-manager calls</text>
+    <text x="32" y="524"><tspan fill="#8b5cf6">$ </tspan><tspan fill="#f8fafc">depprism diff --format json before/package-lock.json after/package-lock.json</tspan></text>
+    <text x="32" y="570"><tspan fill="#7cb8ff">"path"</tspan><tspan fill="#8b93a7">: [</tspan><tspan fill="#c4b5fd">"alpha"</tspan><tspan fill="#8b93a7">, </tspan><tspan fill="#c4b5fd">"child"</tspan><tspan fill="#8b93a7">],  </tspan><tspan fill="#7cb8ff">"passed"</tspan><tspan fill="#8b93a7">: </tspan><tspan fill="#f87171">false</tspan></text>
+  </g>
+</svg>
