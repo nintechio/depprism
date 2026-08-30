@@ -4,6 +4,12 @@ All notable changes to DepPrism are documented here. The format follows [Keep a 
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-08-30
+
+### Fixed
+
+- Allow the non-root Docker analyzer to write GitHub's runner-owned step summary and output channels through a narrowly scoped, privilege-dropping entrypoint.
+
 ## [1.0.0] - 2026-08-30
 
 ### Added
@@ -15,5 +21,6 @@ All notable changes to DepPrism are documented here. The format follows [Keep a 
 - Base-commit policy trust for pull-request review.
 - Non-root Docker Action and reproducible release archives with checksums and artifact attestations.
 
-[Unreleased]: https://github.com/nintechio/depprism/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/nintechio/depprism/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/nintechio/depprism/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/nintechio/depprism/releases/tag/v1.0.0

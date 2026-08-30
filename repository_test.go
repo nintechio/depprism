@@ -130,6 +130,28 @@ func TestReadmeReferencesExistingLocalFiles(t *testing.T) {
 	}
 }
 
+func TestContainerEntrypointDropsPrivileges(t *testing.T) {
+	data, err := os.ReadFile("entrypoint.sh")
+	if err != nil {
+		t.Fatal(err)
+	}
+	text := string(data)
+	for _, required := range []string{
+		`"${GITHUB_STEP_SUMMARY:-}"`,
+		`"${GITHUB_OUTPUT:-}"`,
+		"/github/file_commands/*",
+		"readlink -f",
+		"chgrp depprism",
+		"chmod g+x",
+		"chmod g+rw",
+		"exec su-exec depprism:depprism /usr/local/bin/depprism",
+	} {
+		if !strings.Contains(text, required) {
+			t.Fatalf("entrypoint is missing %q", required)
+		}
+	}
+}
+
 func FuzzParseDoesNotPanic(f *testing.F) {
 	files := SupportedFiles()
 	for index, seed := range [][]byte{

@@ -3,6 +3,7 @@
 /.github/workflows/ @nintechio
 /action.yml @nintechio
 /Dockerfile @nintechio
+/entrypoint.sh @nintechio
 /scripts/build-release.sh @nintechio
 /.changefence.json @nintechio
 /.depprism.json @nintechio

@@ -32,5 +32,6 @@ We aim to acknowledge a report within 72 hours. Validation and remediation timel
 - a parser panic or unbounded behavior on crafted committed input;
 - materially incorrect dependency evidence with a security impact;
 - unsafe container permissions, archive construction, checksums, or release provenance.
+- widening the privileged entrypoint beyond command-directory traversal and runner-provided summary/output write access.
 
 Registry compromise, package malware detection, and undisclosed upstream advisories are outside DepPrism's offline evidence boundary. See the complete [security model](docs/security-model.md).

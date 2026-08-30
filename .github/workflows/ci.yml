@@ -80,4 +80,28 @@ jobs:
         shell: bash
         run: |
           test "$(docker run --rm depprism:ci version)" = "depprism action"
-          docker run --rm --entrypoint /usr/bin/id depprism:ci | grep -q 'uid=10001(depprism)'
+          docker run --rm --entrypoint /sbin/su-exec depprism:ci depprism /usr/bin/id | grep -q 'uid=10001(depprism)'
+      - name: Verify GitHub command channels
+        shell: bash
+        run: |
+          commands="$(mktemp -d)"
+          summary="$commands/summary"
+          output="$commands/output"
+          touch "$summary" "$output"
+          if docker run --rm \
+            -v "$PWD:/github/workspace" \
+            -v "$commands:/github/file_commands" \
+            -w /github/workspace \
+            -e GITHUB_STEP_SUMMARY=/github/file_commands/summary \
+            -e GITHUB_OUTPUT=/github/file_commands/output \
+            depprism:ci diff --format github \
+              testdata/demo/before/package-lock.json \
+              testdata/demo/after/package-lock.json; then
+            echo "Expected the demonstration policy failure" >&2
+            exit 1
+          else
+            status=$?
+            test "$status" -eq 1
+          fi
+          grep -q 'DepPrism dependency evidence' "$summary"
+          grep -q 'passed=false' "$output"

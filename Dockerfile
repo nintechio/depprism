@@ -9,11 +9,11 @@ RUN CGO_ENABLED=0 go build -trimpath -buildvcs=false -ldflags="-s -w -X main.ver
 
 FROM alpine:3.24.1@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b
 
-RUN apk add --no-cache ca-certificates git \
+RUN apk add --no-cache ca-certificates git su-exec \
     && addgroup -S depprism \
     && adduser -S -D -u 10001 -G depprism depprism
 COPY --from=build /out/depprism /usr/local/bin/depprism
+COPY entrypoint.sh /usr/local/bin/depprism-entrypoint
 
 ENV HOME=/home/depprism
-USER depprism
-ENTRYPOINT ["/usr/local/bin/depprism"]
+ENTRYPOINT ["/usr/local/bin/depprism-entrypoint"]

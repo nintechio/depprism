@@ -14,6 +14,8 @@ In pull-request review:
 
 DepPrism resolves refs to commits, reads file bytes from Git objects, invokes Git without a shell, rejects unsafe repository paths, strictly decodes policy, validates normalized graph references, sanitizes human output, and escapes GitHub workflow commands.
 
+GitHub creates its Docker Action command-channel files as the host runner user. The container entrypoint starts as root, grants the dedicated analyzer group traverse access to the GitHub-managed command directory and write access to only the two exact runner-provided files beneath it, leaves the host owner unchanged, and immediately executes the analyzer through `su-exec` as the dedicated UID 10001 user. Paths are resolved before the `/github/file_commands` boundary is checked. No repository-controlled content is parsed before privileges are dropped.
+
 ## What offline evidence can prove
 
 DepPrism can prove that committed dependency evidence changed in a particular way. For example, a checksum or source changed without a version change, a new Git resolution appeared, or an npm/pnpm record newly declares install/build behavior.
