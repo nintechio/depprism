@@ -31,7 +31,7 @@
     "cmd/**/*_test.go"
   ],
   "require_tests_for_source": true,
-  "allow_dependency_changes": false,
+  "allow_dependency_changes": true,
   "allow_binary_changes": false,
   "zones": [
     {

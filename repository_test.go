@@ -43,6 +43,7 @@ func TestRepositoryYAMLParses(t *testing.T) {
 		".github/workflows/ci.yml",
 		".github/workflows/release.yml",
 		".github/workflows/changefence.yml",
+		".github/workflows/depprism.yml",
 		".github/ISSUE_TEMPLATE/bug.yml",
 		".github/ISSUE_TEMPLATE/ecosystem.yml",
 		".github/ISSUE_TEMPLATE/config.yml",
